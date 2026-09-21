@@ -7,7 +7,7 @@ import Waves from '@/components/Waves';
 
 export default function PortfolioPage() {
   const [showMoreProjects, setShowMoreProjects] = useState(false);
-  
+
   return (
     /* Pembungkus Utama (Diatur relative & overflow-x-hidden agar gambar tidak memicu scroll samping) */
     <main className="relative min-h-screen bg-[#0a0a0a] text-zinc-200 selection:bg-white selection:text-black pb-24 overflow-x-hidden">
@@ -90,8 +90,17 @@ export default function PortfolioPage() {
                 />
             </div>
 
-            {/* Tilted Floating Card in FRONT */}
-            <div className="absolute -bottom-14 right-6 md:right-8 w-28 md:w-32 h-40 md:h-44 bg-[#d9d9d9] rounded-3xl md:rounded-[26px] rotate-[4deg] shadow-2xl border border-white/10 z-10 transition-transform duration-300 hover:rotate-2 hover:scale-105"></div>
+            {/* Floating Profile Image (Posisi Diturunkan Lebih Ke Bawah) */}
+            <div className="absolute -bottom-24 right-2 md:right-4 w-44 md:w-56 h-44 md:h-56 z-10 transition-transform duration-300 hover:scale-105">
+              <Image
+                src="/profile.webp"
+                alt="Profile Avatar"
+                fill
+                sizes="(max-width: 768px) 176px, 224px"
+                priority
+                className="object-contain [image-rendering:pixelated]"
+              />
+            </div>
           </div>
 
           {/* Intro Heading */}
