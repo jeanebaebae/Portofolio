@@ -483,6 +483,52 @@ export default function PortfolioPage() {
                     </a>
                   </div>
                 </div>
+                {/* Project Card 4 */}
+                <div className={`p-3.5 rounded-2xl border flex flex-col justify-between transition-colors duration-300 animate-in fade-in slide-in-from-top-4 ${
+                  isLightMode 
+                    ? 'border-zinc-300 bg-transparent' 
+                    : 'border-zinc-800/80 bg-zinc-900/30'
+                }`}>
+                  <div>
+                    <div className="relative w-full h-36 rounded-xl mb-3.5 overflow-hidden">
+                      <Image
+                        src="/Portofolio.webp"
+                        alt="NusantaraFireMap application preview"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 300px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className={`font-semibold text-[14px] mb-1 px-0.5 transition-colors ${
+                      isLightMode ? 'text-black' : 'text-white'
+                    }`}>Current Portofolio</h3>
+                    <p className={`text-[12px] mb-3.5 px-0.5 leading-relaxed font-normal transition-colors ${
+                      isLightMode ? 'text-zinc-600' : 'text-zinc-400'
+                    }`}>
+                      A simple portofolio website using Next.js and TailwindCSS
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 mb-4 px-0.5">
+                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                      }`}>Next.js</span>
+                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                      }`}>TailwindCSS</span>
+                    </div>
+                  </div>
+                  <div className="px-0.5 pt-1">
+                    <a href="https://github.com/jeanebaebae/Portofolio" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2 group/gh transition-colors ${
+                      isLightMode ? 'text-zinc-600 hover:text-black' : 'text-zinc-400 hover:text-white'
+                    }`}>
+                      <svg className="w-6 h-6 fill-current flex-shrink-0" viewBox="0 0 24 24">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                      </svg>
+                      <span className={`px-2.5 py-0.5 text-[11px] font-semibold rounded-full opacity-0 -translate-x-2 group-hover/gh:opacity-100 group-hover/gh:translate-x-0 transition-all duration-200 ease-out shadow-md ${
+                        isLightMode ? 'bg-black text-white' : 'bg-white text-black'
+                      }`}>Open</span>
+                    </a>
+                  </div>
+                </div>
               </>
             )}
 
