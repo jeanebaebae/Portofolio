@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Waves from '@/components/Waves';
+import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function PortfolioPage() {
@@ -82,68 +84,8 @@ export default function PortfolioPage() {
         />
       </div>
 
-      {/* 2. NAVBAR FIXED DI PALING ATAS */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors duration-300 ${
-        isLightMode 
-          ? 'bg-[#FFFAF4]/80 border-zinc-300/50' 
-          : 'bg-[#0a0a0a]/80 border-zinc-800/50'
-      }`}>
-        <div className="max-w-[640px] mx-auto px-5 py-3.5 flex justify-between items-center text-sm">
-          <Link 
-            href="/" 
-            className={`font-semibold text-base tracking-tight hover:opacity-80 transition-opacity ${
-              isLightMode ? 'text-black' : 'text-white'
-            }`}
-          >
-            Eugene
-          </Link>
-
-          <div className="flex items-center gap-5">
-            <div className={`flex gap-5 font-medium text-xs md:text-sm ${
-              isLightMode ? 'text-zinc-600' : 'text-zinc-400'
-            }`}>
-              <Link href="#projects" className={`transition-colors ${isLightMode ? 'hover:text-black' : 'hover:text-white'}`}>
-                Projects
-              </Link>
-              <Link href="#experience" className={`transition-colors ${isLightMode ? 'hover:text-black' : 'hover:text-white'}`}>
-                Experience
-              </Link>
-              <Link href="#contact" className={`transition-colors ${isLightMode ? 'hover:text-black' : 'hover:text-white'}`}>
-                Contact
-              </Link>
-            </div>
-
-            {/* TOGGLE BULAN MINI KHUSUS MOBILE (VISIBLE IN MOBILE, HIDDEN IN DESKTOP) */}
-            <button
-              onClick={toggleTheme}
-              className="md:hidden relative w-9 h-9 flex items-center justify-center rounded-full overflow-hidden focus:outline-none cursor-pointer active:scale-90 transition-transform"
-              title="Toggle theme"
-              aria-label="Toggle light/dark theme"
-            >
-              {/* Gambar Bulan Mini Dark Mode */}
-              <Image
-                src="/moon.webp"
-                alt="Dark Moon Mini"
-                width={36}
-                height={36}
-                className={`object-contain transition-all duration-700 ease-in-out ${
-                  isLightMode ? 'opacity-0 rotate-180 scale-75 absolute' : 'opacity-100 rotate-0 scale-100'
-                }`}
-              />
-              {/* Gambar Bulan Mini Light Mode */}
-              <Image
-                src="/moon_near.webp"
-                alt="Light Moon Mini"
-                width={36}
-                height={36}
-                className={`object-contain transition-all duration-700 ease-in-out ${
-                  isLightMode ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-180 scale-75 absolute'
-                }`}
-              />
-            </button>
-          </div>
-        </div>
-      </nav>
+      {/* Panggil komponen Navbar terpisah */}
+      <Navbar isLightMode={isLightMode} toggleTheme={toggleTheme} />
 
       {/* Centered container (approx 640px wide, diberi pt-16 agar tidak tertutup navbar fixed) */}
       <div className="relative z-10 max-w-[640px] mx-auto px-5 pt-16 md:pt-20 py-8 md:py-12">
@@ -188,7 +130,7 @@ export default function PortfolioPage() {
           <h1 className={`text-2xl md:text-3xl font-bold mb-2.5 tracking-tight transition-colors ${
             isLightMode ? 'text-black' : 'text-white'
           }`}>
-            hi, im Eugene
+            hi, i'm Eugene
           </h1>
 
           {/* Availability Status */}
@@ -771,11 +713,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* FOOTER */}
-        <footer className={`pt-6 border-t flex justify-between items-center text-[12px] transition-colors ${
-          isLightMode ? 'border-zinc-300/80 text-zinc-500' : 'border-zinc-800/50 text-zinc-500'
-        }`}>
-          <p>© {new Date().getFullYear()} Eugene. All rights reserved.</p>
-        </footer>
+        <Footer isLightMode={isLightMode} />
 
       </div>
     </main>
