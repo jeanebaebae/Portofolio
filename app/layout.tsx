@@ -17,8 +17,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Eugene - Software Engineer Portfolio",
-  description: "Portfolio of Eugene - Open for Software Engineering Internship",
+  title: "Eugene Ganesha Hermanus - Software Engineer",
+  description: "Eugene's portofolio - Open for Software Engineering Internship",
 };
 
 export default function RootLayout({

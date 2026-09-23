@@ -635,7 +635,7 @@ export default function PortfolioPage() {
 
         {/* CONTACT ME SECTION */}
         <section id="contact" className="mb-12 scroll-mt-20">
-          <h2 className={`text-2xl md:text-3xl font-bold mb-4 transition-colors ${
+          <h2 className={`text-2xl md:text-3xl font-bold mb-1 transition-colors ${
             isLightMode ? 'text-black' : 'text-white'
           }`}>
             Contact me
@@ -661,7 +661,7 @@ export default function PortfolioPage() {
                 : 'border-zinc-800/80 bg-zinc-900/30'
             }`}>
               {/* Garis pembatas (divide-...) diatur dinamis menyesuaikan border */}
-              <div className={`space-y-4 divide-y transition-colors ${
+              <div className={`space-y-2 divide-y transition-colors ${
                 isLightMode ? 'divide-zinc-300' : 'divide-zinc-800/60'
               }`}>
                 {/* Email Item */}
@@ -749,11 +749,6 @@ export default function PortfolioPage() {
           isLightMode ? 'border-zinc-300/80 text-zinc-500' : 'border-zinc-800/50 text-zinc-500'
         }`}>
           <p>© {new Date().getFullYear()} Eugene. All rights reserved.</p>
-          <a href="#contact" className={`transition-colors ${
-            isLightMode ? 'hover:text-black' : 'hover:text-white'
-          }`}>
-            Back to top &uarr;
-          </a>
         </footer>
 
       </div>
