@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Waves from '@/components/Waves';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-
 export default function PortfolioPage() {
   const [showMoreProjects, setShowMoreProjects] = useState(false);
   const [isLightMode, setIsLightMode] = useState(false);
@@ -26,10 +25,10 @@ export default function PortfolioPage() {
       }`}
     >
       
-      {/* ELEMEN BULAN FIXED (Posisi top diturunkan agar tidak menempel navbar) */}
+      {/* 1. ELEMEN BULAN RAKSASA (KHUSUS DESKTOP / HIDDEN IN MOBILE) */}
       <div 
         onClick={toggleTheme}
-        className="fixed top-[12%] sm:top-16 md:top-20 -right-24 sm:-right-32 md:-right-44 w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] md:w-[480px] md:h-[480px] z-20 select-none group cursor-pointer"
+        className="hidden md:block fixed top-20 -right-44 w-[480px] h-[480px] z-20 select-none group cursor-pointer"
         title="Click to toggle light/dark theme"
       >
         {/* SVG Curved Text */}
@@ -44,7 +43,7 @@ export default function PortfolioPage() {
             />
           </defs>
           <text 
-            className={`font-mono text-[11px] sm:text-[13px] tracking-[0.25em] font-medium uppercase transition-all duration-300 drop-shadow-md ${
+            className={`font-mono text-[13px] tracking-[0.25em] font-medium uppercase transition-all duration-300 drop-shadow-md ${
               isLightMode 
                 ? 'fill-zinc-600 group-hover:fill-black' 
                 : 'fill-zinc-300 group-hover:fill-white'
@@ -61,7 +60,7 @@ export default function PortfolioPage() {
           src="/moon.webp"
           alt="Dark Moon Illustration"
           fill
-          sizes="(max-width: 640px) 280px, (max-width: 768px) 380px, 480px"
+          sizes="480px"
           priority
           className={`object-contain filter contrast-125 brightness-90 transition-all duration-700 ease-in-out group-hover:scale-105 ${
             isLightMode ? 'opacity-0 rotate-180 scale-90 pointer-events-none' : 'opacity-100 rotate-0 scale-100'
@@ -73,23 +72,23 @@ export default function PortfolioPage() {
           src="/moon_near.webp"
           alt="Light Moon Illustration"
           fill
-          sizes="(max-width: 640px) 280px, (max-width: 768px) 380px, 480px"
+          sizes="480px"
           priority
           className={`object-contain filter contrast-125 brightness-90 transition-all duration-700 ease-in-out ${
             isLightMode 
-              ? 'opacity-100 rotate-0 scale-105 group-hover:scale-110' 
+              ? 'opacity-100 rotate-0 scale-110 group-hover:scale-115' 
               : 'opacity-0 -rotate-180 scale-90 pointer-events-none'
           }`}
         />
       </div>
 
-      {/* NAVBAR FIXED DI PALING ATAS */}
+      {/* 2. NAVBAR FIXED DI PALING ATAS */}
       <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors duration-300 ${
         isLightMode 
           ? 'bg-[#FFFAF4]/80 border-zinc-300/50' 
           : 'bg-[#0a0a0a]/80 border-zinc-800/50'
       }`}>
-        <div className="max-w-[640px] mx-auto px-5 py-4 flex justify-between items-center text-sm">
+        <div className="max-w-[640px] mx-auto px-5 py-3.5 flex justify-between items-center text-sm">
           <Link 
             href="/" 
             className={`font-semibold text-base tracking-tight hover:opacity-80 transition-opacity ${
@@ -98,18 +97,50 @@ export default function PortfolioPage() {
           >
             Eugene
           </Link>
-          <div className={`flex gap-6 font-medium text-xs md:text-sm ${
-            isLightMode ? 'text-zinc-600' : 'text-zinc-400'
-          }`}>
-            <Link href="#projects" className={`transition-colors ${isLightMode ? 'hover:text-black' : 'hover:text-white'}`}>
-              Projects
-            </Link>
-            <Link href="#experience" className={`transition-colors ${isLightMode ? 'hover:text-black' : 'hover:text-white'}`}>
-              Experience
-            </Link>
-            <Link href="#contact" className={`transition-colors ${isLightMode ? 'hover:text-black' : 'hover:text-white'}`}>
-              Contact
-            </Link>
+
+          <div className="flex items-center gap-5">
+            <div className={`flex gap-5 font-medium text-xs md:text-sm ${
+              isLightMode ? 'text-zinc-600' : 'text-zinc-400'
+            }`}>
+              <Link href="#projects" className={`transition-colors ${isLightMode ? 'hover:text-black' : 'hover:text-white'}`}>
+                Projects
+              </Link>
+              <Link href="#experience" className={`transition-colors ${isLightMode ? 'hover:text-black' : 'hover:text-white'}`}>
+                Experience
+              </Link>
+              <Link href="#contact" className={`transition-colors ${isLightMode ? 'hover:text-black' : 'hover:text-white'}`}>
+                Contact
+              </Link>
+            </div>
+
+            {/* TOGGLE BULAN MINI KHUSUS MOBILE (VISIBLE IN MOBILE, HIDDEN IN DESKTOP) */}
+            <button
+              onClick={toggleTheme}
+              className="md:hidden relative w-9 h-9 flex items-center justify-center rounded-full overflow-hidden focus:outline-none cursor-pointer active:scale-90 transition-transform"
+              title="Toggle theme"
+              aria-label="Toggle light/dark theme"
+            >
+              {/* Gambar Bulan Mini Dark Mode */}
+              <Image
+                src="/moon.webp"
+                alt="Dark Moon Mini"
+                width={36}
+                height={36}
+                className={`object-contain transition-all duration-700 ease-in-out ${
+                  isLightMode ? 'opacity-0 rotate-180 scale-75 absolute' : 'opacity-100 rotate-0 scale-100'
+                }`}
+              />
+              {/* Gambar Bulan Mini Light Mode */}
+              <Image
+                src="/moon_near.webp"
+                alt="Light Moon Mini"
+                width={36}
+                height={36}
+                className={`object-contain transition-all duration-700 ease-in-out ${
+                  isLightMode ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-180 scale-75 absolute'
+                }`}
+              />
+            </button>
           </div>
         </div>
       </nav>
@@ -483,6 +514,7 @@ export default function PortfolioPage() {
                     </a>
                   </div>
                 </div>
+
                 {/* Project Card 4 */}
                 <div className={`p-3.5 rounded-2xl border flex flex-col justify-between transition-colors duration-300 animate-in fade-in slide-in-from-top-4 ${
                   isLightMode 
@@ -493,7 +525,7 @@ export default function PortfolioPage() {
                     <div className="relative w-full h-36 rounded-xl mb-3.5 overflow-hidden">
                       <Image
                         src="/Portofolio.webp"
-                        alt="NusantaraFireMap application preview"
+                        alt="Current Portofolio preview"
                         fill
                         sizes="(max-width: 768px) 100vw, 300px"
                         className="object-cover"
