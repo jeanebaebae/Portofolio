@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Waves from '@/components/Waves';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+
 
 export default function PortfolioPage() {
   const [showMoreProjects, setShowMoreProjects] = useState(false);
@@ -189,9 +191,7 @@ export default function PortfolioPage() {
               }`}
               aria-label="GitHub Profile"
             >
-              <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
-                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-              </svg>
+              <FaGithub className="w-8 h-8" />
             </a>
             <a
               href="https://www.linkedin.com/in/eugene-ganesha-hermanus-7352ab326/"
@@ -202,9 +202,7 @@ export default function PortfolioPage() {
               }`}
               aria-label="LinkedIn Profile"
             >
-              <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
-                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.77a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26z"/>
-              </svg>
+              <FaLinkedin className="w-8 h-8" />
             </a>
           </div>
         </section>
@@ -343,7 +341,7 @@ export default function PortfolioPage() {
               
               <div className="px-0.5 pt-1">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/jeanebaebae/motoservis-frontend"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`inline-flex items-center gap-2 group/gh transition-colors ${
@@ -410,7 +408,7 @@ export default function PortfolioPage() {
               
               <div className="px-0.5 pt-1">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/jeanebaebae/suplaihub-app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`inline-flex items-center gap-2 group/gh transition-colors ${
@@ -441,7 +439,7 @@ export default function PortfolioPage() {
                   <div>
                     <div className="relative w-full h-36 rounded-xl mb-3.5 overflow-hidden">
                       <Image
-                        src="/motoservis.webp"
+                        src="/Nusantara.webp"
                         alt="NusantaraFireMap application preview"
                         fill
                         sizes="(max-width: 768px) 100vw, 300px"
@@ -473,57 +471,7 @@ export default function PortfolioPage() {
                     </div>
                   </div>
                   <div className="px-0.5 pt-1">
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2 group/gh transition-colors ${
-                      isLightMode ? 'text-zinc-600 hover:text-black' : 'text-zinc-400 hover:text-white'
-                    }`}>
-                      <svg className="w-6 h-6 fill-current flex-shrink-0" viewBox="0 0 24 24">
-                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                      </svg>
-                      <span className={`px-2.5 py-0.5 text-[11px] font-semibold rounded-full opacity-0 -translate-x-2 group-hover/gh:opacity-100 group-hover/gh:translate-x-0 transition-all duration-200 ease-out shadow-md ${
-                        isLightMode ? 'bg-black text-white' : 'bg-white text-black'
-                      }`}>Open</span>
-                    </a>
-                  </div>
-                </div>
-
-                {/* Project Card 4 */}
-                <div className={`p-3.5 rounded-2xl border flex flex-col justify-between transition-colors duration-300 animate-in fade-in slide-in-from-top-4 ${
-                  isLightMode 
-                    ? 'border-zinc-300 bg-transparent' 
-                    : 'border-zinc-800/80 bg-zinc-900/30'
-                }`}>
-                  <div>
-                    <div className="relative w-full h-36 rounded-xl mb-3.5 overflow-hidden">
-                      <Image
-                        src="/motoservis.webp"
-                        alt="Project 4 preview"
-                        fill
-                        sizes="(max-width: 768px) 100vw, 300px"
-                        className="object-cover"
-                      />
-                    </div>
-                    <h3 className={`font-semibold text-[14px] mb-1 px-0.5 transition-colors ${
-                      isLightMode ? 'text-black' : 'text-white'
-                    }`}>Project 4</h3>
-                    <p className={`text-[12px] mb-3.5 px-0.5 leading-relaxed font-normal transition-colors ${
-                      isLightMode ? 'text-zinc-600' : 'text-zinc-400'
-                    }`}>
-                      A product catalog application for suppliers and clients
-                    </p>
-                    <div className="flex flex-wrap gap-1.5 mb-4 px-0.5">
-                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                      }`}>Golang</span>
-                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                      }`}>Redis</span>
-                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                      }`}>Postgres</span>
-                    </div>
-                  </div>
-                  <div className="px-0.5 pt-1">
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2 group/gh transition-colors ${
+                    <a href="https://github.com/jeanebaebae/firetracker-web" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2 group/gh transition-colors ${
                       isLightMode ? 'text-zinc-600 hover:text-black' : 'text-zinc-400 hover:text-white'
                     }`}>
                       <svg className="w-6 h-6 fill-current flex-shrink-0" viewBox="0 0 24 24">
@@ -609,7 +557,7 @@ export default function PortfolioPage() {
                   <span className={`text-[12px] font-medium whitespace-nowrap transition-colors ${
                     isLightMode ? 'text-zinc-600' : 'text-zinc-400'
                   }`}>
-                    Jul 2025 - Present
+                    Jul 2026 - Present
                   </span>
                 </div>
 
@@ -660,14 +608,14 @@ export default function PortfolioPage() {
                 ? 'border-zinc-300 bg-transparent' 
                 : 'border-zinc-800/80 bg-zinc-900/30'
             }`}>
-              {/* Garis pembatas (divide-...) diatur dinamis menyesuaikan border */}
-              <div className={`space-y-2 divide-y transition-colors ${
+              {/* Pembatas divide-y */}
+              <div className={`divide-y transition-colors ${
                 isLightMode ? 'divide-zinc-300' : 'divide-zinc-800/60'
               }`}>
                 {/* Email Item */}
                 <a 
                   href="mailto:0506.eugene@gmail.com" 
-                  className="flex items-center gap-3 pb-3 group cursor-pointer"
+                  className="flex items-center gap-3 pb-4 group cursor-pointer"
                 >
                   <div className={`p-2 rounded-lg transition-colors ${
                     isLightMode ? 'text-zinc-600 group-hover:text-black' : 'text-zinc-400 group-hover:text-white'
@@ -693,7 +641,7 @@ export default function PortfolioPage() {
                   href="https://github.com/jeanebaebae" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex items-center gap-3 pt-4 pb-3 group cursor-pointer"
+                  className="flex items-center gap-3 py-4 group cursor-pointer"
                 >
                   <div className={`p-2 rounded-lg transition-colors ${
                     isLightMode ? 'text-zinc-600 group-hover:text-black' : 'text-zinc-400 group-hover:text-white'
@@ -725,7 +673,7 @@ export default function PortfolioPage() {
                     isLightMode ? 'text-zinc-600 group-hover:text-black' : 'text-zinc-400 group-hover:text-white'
                   }`}>
                     <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.77a1.63 1.63 0 1 0 0 3.26 1.63 1.63 0 0 0 0-3.26z"/>
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                     </svg>
                   </div>
                   <div>
