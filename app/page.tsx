@@ -24,10 +24,10 @@ export default function PortfolioPage() {
       }`}
     >
       
-      {/* ELEMEN BULAN DENGAN TOGGLE THEME SAAT DIKLIK */}
+      {/* ELEMEN BULAN FIXED (Posisi top diturunkan agar tidak menempel navbar) */}
       <div 
         onClick={toggleTheme}
-        className="absolute top-[8%] -right-24 sm:-right-32 md:-right-44 w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] md:w-[480px] md:h-[480px] z-20 select-none group cursor-pointer"
+        className="fixed top-[12%] sm:top-16 md:top-20 -right-24 sm:-right-32 md:-right-44 w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] md:w-[480px] md:h-[480px] z-20 select-none group cursor-pointer"
         title="Click to toggle light/dark theme"
       >
         {/* SVG Curved Text */}
@@ -73,17 +73,21 @@ export default function PortfolioPage() {
           fill
           sizes="(max-width: 640px) 280px, (max-width: 768px) 380px, 480px"
           priority
-          className={`object-contain filter contrast-125 brightness-90 transition-all duration-700 ease-in-out group-hover:scale-105 ${
-            isLightMode ? 'opacity-100 rotate-0 scale-110' : 'opacity-0 -rotate-180 scale-90 pointer-events-none'
+          className={`object-contain filter contrast-125 brightness-90 transition-all duration-700 ease-in-out ${
+            isLightMode 
+              ? 'opacity-100 rotate-0 scale-105 group-hover:scale-110' 
+              : 'opacity-0 -rotate-180 scale-90 pointer-events-none'
           }`}
         />
       </div>
 
-      {/* Centered container (approx 640px wide) */}
-      <div className="relative z-10 max-w-[640px] mx-auto px-5 py-8 md:py-12">
-        
-        {/* NAVBAR */}
-        <nav className="flex justify-between items-center mb-5 text-sm">
+      {/* NAVBAR FIXED DI PALING ATAS */}
+      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors duration-300 ${
+        isLightMode 
+          ? 'bg-[#FFFAF4]/80 border-zinc-300/50' 
+          : 'bg-[#0a0a0a]/80 border-zinc-800/50'
+      }`}>
+        <div className="max-w-[640px] mx-auto px-5 py-4 flex justify-between items-center text-sm">
           <Link 
             href="/" 
             className={`font-semibold text-base tracking-tight hover:opacity-80 transition-opacity ${
@@ -105,10 +109,14 @@ export default function PortfolioPage() {
               Contact
             </Link>
           </div>
-        </nav>
+        </div>
+      </nav>
+
+      {/* Centered container (approx 640px wide, diberi pt-16 agar tidak tertutup navbar fixed) */}
+      <div className="relative z-10 max-w-[640px] mx-auto px-5 pt-16 md:pt-20 py-8 md:py-12">
 
         {/* HERO SECTION */}
-        <section className="mb-8 mt-6">
+        <section className="mb-8 mt-4">
           {/* Banner Container */}
           <div className="relative mb-5">
             {/* Wavy Banner Container */}
@@ -210,7 +218,6 @@ export default function PortfolioPage() {
             isLightMode ? 'text-zinc-600' : 'text-zinc-400'
           }`}>
             
-            {/* Tech stack icons... */}
             <div className="flex flex-col items-center gap-2 group cursor-pointer">
               <div className="transition-all duration-300 transform group-hover:scale-150 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
                 <i className="devicon-javascript-plain colored text-3xl"></i>
@@ -281,7 +288,7 @@ export default function PortfolioPage() {
         <hr className={`my-8 transition-colors ${isLightMode ? 'border-zinc-300/80' : 'border-zinc-800/80'}`} />
 
         {/* PROJECTS SECTION */}
-        <section id="projects" className="mb-10 scroll-mt-10">
+        <section id="projects" className="mb-10 scroll-mt-20">
           <h2 className={`text-base font-semibold mb-5 transition-colors ${isLightMode ? 'text-black' : 'text-white'}`}>
             Projects
           </h2>
@@ -289,41 +296,49 @@ export default function PortfolioPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
             
             {/* Project Card 1 */}
-            <div className={`p-3.5 rounded-2xl border transition-colors duration-300 ${
+            <div className={`p-3.5 rounded-2xl border flex flex-col justify-between transition-colors duration-300 ${
               isLightMode 
                 ? 'border-zinc-300 bg-transparent' 
                 : 'border-zinc-800/80 bg-zinc-900/30'
             }`}>
-              <div className={`w-full h-36 rounded-xl mb-3.5 transition-colors ${
-                isLightMode ? 'bg-[#EFE8DF]' : 'bg-[#27272a]/70'
-              }`}></div>
-              
-              <h3 className={`font-semibold text-[14px] mb-1 px-0.5 transition-colors ${
-                isLightMode ? 'text-black' : 'text-white'
-              }`}>motoservis</h3>
-              <p className={`text-[12px] mb-3.5 px-0.5 leading-relaxed font-normal transition-colors ${
-                isLightMode ? 'text-zinc-600' : 'text-zinc-400'
-              }`}>
-                a motorcycle maintenance management application designed to help users 
-                manage their motorcycle information.
-              </p>
-              
-              <div className="flex flex-wrap gap-1.5 mb-4 px-0.5">
-                <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                  isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                }`}>Flutter</span>
-                <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                  isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                }`}>Node.js</span>
-                <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                  isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                }`}>Postgres</span>
-                <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                  isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                }`}>Supabase</span>
-                <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                  isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                }`}>OAuth</span>
+              <div>
+                <div className="relative w-full h-36 rounded-xl mb-3.5 overflow-hidden">
+                  <Image
+                    src="/motoservis.webp"
+                    alt="motoservis application preview"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 300px"
+                    className="object-cover"
+                  />
+                </div>
+                
+                <h3 className={`font-semibold text-[14px] mb-1 px-0.5 transition-colors ${
+                  isLightMode ? 'text-black' : 'text-white'
+                }`}>motoservis</h3>
+                <p className={`text-[12px] mb-3.5 px-0.5 leading-relaxed font-normal transition-colors ${
+                  isLightMode ? 'text-zinc-600' : 'text-zinc-400'
+                }`}>
+                  a motorcycle maintenance management application designed to help users 
+                  manage their motorcycle information.
+                </p>
+                
+                <div className="flex flex-wrap gap-1.5 mb-4 px-0.5">
+                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  }`}>Flutter</span>
+                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  }`}>Node.js</span>
+                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  }`}>Postgres</span>
+                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  }`}>Supabase</span>
+                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  }`}>OAuth</span>
+                </div>
               </div>
               
               <div className="px-0.5 pt-1">
@@ -348,34 +363,49 @@ export default function PortfolioPage() {
             </div>
 
             {/* Project Card 2 */}
-            <div className={`p-3.5 rounded-2xl border transition-colors duration-300 ${
+            <div className={`p-3.5 rounded-2xl border flex flex-col justify-between transition-colors duration-300 ${
               isLightMode 
                 ? 'border-zinc-300 bg-transparent' 
                 : 'border-zinc-800/80 bg-zinc-900/30'
             }`}>
-              <div className={`w-full h-36 rounded-xl mb-3.5 transition-colors ${
-                isLightMode ? 'bg-[#EFE8DF]' : 'bg-[#27272a]/70'
-              }`}></div>
-              
-              <h3 className={`font-semibold text-[14px] mb-1 px-0.5 transition-colors ${
-                isLightMode ? 'text-black' : 'text-white'
-              }`}>Project 2</h3>
-              <p className={`text-[12px] mb-3.5 px-0.5 leading-relaxed font-normal transition-colors ${
-                isLightMode ? 'text-zinc-600' : 'text-zinc-400'
-              }`}>
-                A product catalog application for suppliers and clients
-              </p>
-              
-              <div className="flex flex-wrap gap-1.5 mb-4 px-0.5">
-                <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                  isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                }`}>React</span>
-                <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                  isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                }`}>Node.js</span>
-                <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                  isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                }`}>Postgres</span>
+              <div>
+                <div className="relative w-full h-36 rounded-xl mb-3.5 overflow-hidden">
+                  <Image
+                    src="/Suplaihub.webp"
+                    alt="Suplaihub application preview"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 300px"
+                    className="object-cover"
+                  />
+                </div>
+                
+                <h3 className={`font-semibold text-[14px] mb-1 px-0.5 transition-colors ${
+                  isLightMode ? 'text-black' : 'text-white'
+                }`}>Suplaihub</h3>
+                <p className={`text-[12px] mb-3.5 px-0.5 leading-relaxed font-normal transition-colors ${
+                  isLightMode ? 'text-zinc-600' : 'text-zinc-400'
+                }`}>
+                  An easy-to-use platform connecting suppliers and clients to browse products and 
+                  track inventory in real time.
+                </p>
+                
+                <div className="flex flex-wrap gap-1.5 mb-4 px-0.5">
+                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  }`}>Kotlin</span>
+                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  }`}>Jetpack Compose</span>
+                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  }`}>Go</span>
+                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  }`}>Postgres</span>
+                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  }`}>Supabase</span>
+                </div>
               </div>
               
               <div className="px-0.5 pt-1">
@@ -403,32 +433,44 @@ export default function PortfolioPage() {
             {showMoreProjects && (
               <>
                 {/* Project Card 3 */}
-                <div className={`p-3.5 rounded-2xl border transition-colors duration-300 animate-in fade-in slide-in-from-top-4 ${
+                <div className={`p-3.5 rounded-2xl border flex flex-col justify-between transition-colors duration-300 animate-in fade-in slide-in-from-top-4 ${
                   isLightMode 
                     ? 'border-zinc-300 bg-transparent' 
                     : 'border-zinc-800/80 bg-zinc-900/30'
                 }`}>
-                  <div className={`w-full h-36 rounded-xl mb-3.5 transition-colors ${
-                    isLightMode ? 'bg-[#EFE8DF]' : 'bg-[#27272a]/70'
-                  }`}></div>
-                  <h3 className={`font-semibold text-[14px] mb-1 px-0.5 transition-colors ${
-                    isLightMode ? 'text-black' : 'text-white'
-                  }`}>Project 3</h3>
-                  <p className={`text-[12px] mb-3.5 px-0.5 leading-relaxed font-normal transition-colors ${
-                    isLightMode ? 'text-zinc-600' : 'text-zinc-400'
-                  }`}>
-                    A product catalog application for suppliers and clients
-                  </p>
-                  <div className="flex flex-wrap gap-1.5 mb-4 px-0.5">
-                    <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                      isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                    }`}>Next.js</span>
-                    <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                      isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                    }`}>Tailwind</span>
-                    <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                      isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                    }`}>Supabase</span>
+                  <div>
+                    <div className="relative w-full h-36 rounded-xl mb-3.5 overflow-hidden">
+                      <Image
+                        src="/motoservis.webp"
+                        alt="NusantaraFireMap application preview"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 300px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className={`font-semibold text-[14px] mb-1 px-0.5 transition-colors ${
+                      isLightMode ? 'text-black' : 'text-white'
+                    }`}>NusantaraFireMap</h3>
+                    <p className={`text-[12px] mb-3.5 px-0.5 leading-relaxed font-normal transition-colors ${
+                      isLightMode ? 'text-zinc-600' : 'text-zinc-400'
+                    }`}>
+                      A real-time fire monitoring dashboard tracking wildfire data across Indonesia using 
+                      the NASA FIRMS API.
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 mb-4 px-0.5">
+                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                      }`}>React.js</span>
+                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                      }`}>TailwindCSS</span>
+                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                      }`}>Postgres</span>
+                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                      }`}>Redis</span>
+                    </div>
                   </div>
                   <div className="px-0.5 pt-1">
                     <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2 group/gh transition-colors ${
@@ -445,32 +487,40 @@ export default function PortfolioPage() {
                 </div>
 
                 {/* Project Card 4 */}
-                <div className={`p-3.5 rounded-2xl border transition-colors duration-300 animate-in fade-in slide-in-from-top-4 ${
+                <div className={`p-3.5 rounded-2xl border flex flex-col justify-between transition-colors duration-300 animate-in fade-in slide-in-from-top-4 ${
                   isLightMode 
                     ? 'border-zinc-300 bg-transparent' 
                     : 'border-zinc-800/80 bg-zinc-900/30'
                 }`}>
-                  <div className={`w-full h-36 rounded-xl mb-3.5 transition-colors ${
-                    isLightMode ? 'bg-[#EFE8DF]' : 'bg-[#27272a]/70'
-                  }`}></div>
-                  <h3 className={`font-semibold text-[14px] mb-1 px-0.5 transition-colors ${
-                    isLightMode ? 'text-black' : 'text-white'
-                  }`}>Project 4</h3>
-                  <p className={`text-[12px] mb-3.5 px-0.5 leading-relaxed font-normal transition-colors ${
-                    isLightMode ? 'text-zinc-600' : 'text-zinc-400'
-                  }`}>
-                    A product catalog application for suppliers and clients
-                  </p>
-                  <div className="flex flex-wrap gap-1.5 mb-4 px-0.5">
-                    <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                      isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                    }`}>Golang</span>
-                    <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                      isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                    }`}>Redis</span>
-                    <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                      isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                    }`}>Postgres</span>
+                  <div>
+                    <div className="relative w-full h-36 rounded-xl mb-3.5 overflow-hidden">
+                      <Image
+                        src="/motoservis.webp"
+                        alt="Project 4 preview"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 300px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className={`font-semibold text-[14px] mb-1 px-0.5 transition-colors ${
+                      isLightMode ? 'text-black' : 'text-white'
+                    }`}>Project 4</h3>
+                    <p className={`text-[12px] mb-3.5 px-0.5 leading-relaxed font-normal transition-colors ${
+                      isLightMode ? 'text-zinc-600' : 'text-zinc-400'
+                    }`}>
+                      A product catalog application for suppliers and clients
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 mb-4 px-0.5">
+                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                      }`}>Golang</span>
+                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                      }`}>Redis</span>
+                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                      }`}>Postgres</span>
+                    </div>
                   </div>
                   <div className="px-0.5 pt-1">
                     <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2 group/gh transition-colors ${
@@ -494,11 +544,11 @@ export default function PortfolioPage() {
           <div className="flex justify-end pt-1">
             <button
               onClick={() => setShowMoreProjects(!showMoreProjects)}
-              className={`group inline-flex items-center gap-1 text-[12px] font-medium transition-colors duration-200 cursor-pointer ${
+              className={`group inline-flex items-center gap-1 text-[12px] font-mono transition-colors duration-200 cursor-pointer ${
                 isLightMode ? 'text-zinc-600 hover:text-black' : 'text-zinc-400 hover:text-white'
               }`}
             >
-              <span>{showMoreProjects ? 'View less' : 'View more'}</span>
+              <span>{showMoreProjects ? 'VIEW LESS' : 'VIEW MORE'}</span>
               <span className="transition-transform duration-200 group-hover:translate-x-1">
                 {showMoreProjects ? '↑' : '→'}
               </span>
@@ -510,7 +560,7 @@ export default function PortfolioPage() {
         <hr className={`my-8 transition-colors ${isLightMode ? 'border-zinc-300/80' : 'border-zinc-800/80'}`} />
 
         {/* EXPERIENCE SECTION */}
-        <section id="experience" className="mb-10 scroll-mt-10">
+        <section id="experience" className="mb-10 scroll-mt-20">
           <h2 className={`text-base font-semibold mb-5 transition-colors ${isLightMode ? 'text-black' : 'text-white'}`}>
             Experience
           </h2>
@@ -520,46 +570,63 @@ export default function PortfolioPage() {
               ? 'border-zinc-300 bg-transparent' 
               : 'border-zinc-800/80 bg-zinc-900/30'
           }`}>
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center gap-3">
-                <div className={`w-8 h-8 rounded-full font-bold flex items-center justify-center text-xs shadow-sm transition-colors ${
-                  isLightMode ? 'bg-black text-white' : 'bg-white text-black'
-                }`}>
-                  S
+            <div className="relative flex gap-4">
+              
+              {/* Kolom Kiri: Logo & Garis Timeline Vertikal */}
+              <div className="flex flex-col items-center flex-shrink-0">
+                {/* Logo Perusahaan */}
+                <div className="relative w-8 h-8 rounded-full overflow-hidden z-10 bg-zinc-800 flex-shrink-0">
+                  <Image
+                    src="/logo_pt_kamunesia.webp"
+                    alt="Kamunesia Media Arta Logo"
+                    fill
+                    sizes="32px"
+                    className="object-cover"
+                  />
                 </div>
-                <div>
-                  <h3 className={`font-semibold text-[13px] leading-tight transition-colors ${
-                    isLightMode ? 'text-black' : 'text-white'
-                  }`}>
-                    Kamunesia Media Arta
-                  </h3>
-                  <p className={`text-[11px] mt-0.5 transition-colors ${
+                {/* Garis Vertikal Timeline */}
+                <div className={`w-px flex-1 mt-2.5 transition-colors ${
+                  isLightMode ? 'bg-zinc-300' : 'bg-zinc-800'
+                }`} />
+              </div>
+
+              {/* Kolom Kanan: Detail Informasi & List Poin */}
+              <div className="flex-1 pb-1">
+                {/* Header: Judul Jabatan & Tanggal */}
+                <div className="flex items-start justify-between gap-2 mb-3">
+                  <div>
+                    <h3 className={`font-semibold text-[13px] leading-tight transition-colors ${
+                      isLightMode ? 'text-black' : 'text-white'
+                    }`}>
+                      Kamunesia Media Arta
+                    </h3>
+                    <p className={`text-[13px] mt-0.5 transition-colors ${
+                      isLightMode ? 'text-zinc-600' : 'text-zinc-400'
+                    }`}>
+                      Software Engineer (Contract)
+                    </p>
+                  </div>
+                  <span className={`text-[12px] font-medium whitespace-nowrap transition-colors ${
                     isLightMode ? 'text-zinc-600' : 'text-zinc-400'
                   }`}>
-                    Software Engineer (Contract)
-                  </p>
+                    Jul 2025 - Present
+                  </span>
                 </div>
-              </div>
-              <span className={`text-[11px] font-medium transition-colors ${
-                isLightMode ? 'text-zinc-600' : 'text-zinc-400'
-              }`}>
-                Jul 2025 - Present
-              </span>
-            </div>
 
-            <ul className={`space-y-1.5 text-[12px] leading-relaxed font-normal list-disc list-inside pl-1 transition-colors ${
-              isLightMode ? 'text-zinc-600' : 'text-zinc-400'
-            }`}>
-              <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-              </li>
-              <li>
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-              </li>
-              <li>
-                ut aliquip ex ea commodo consequat.
-              </li>
-            </ul>
+                {/* List Poin (list-outside ml-4 membuat alignment teks rapi) */}
+                <ul className={`space-y-2 text-[13px] leading-relaxed font-normal list-disc list-outside ml-4 transition-colors ${
+                  isLightMode ? 'text-zinc-600' : 'text-zinc-400'
+                }`}>
+                  <li>
+                    Migrated legacy WordPress site to a scalable React and Tailwind CSS architecture to modernize the tech stack.
+                  </li>
+                  <li>
+                    Optimized frontend performance to eliminate latency and deliver a highly responsive, professional user interface.
+                  </li>
+                </ul>
+              </div>
+
+            </div>
           </div>
         </section>
 
@@ -567,7 +634,7 @@ export default function PortfolioPage() {
         <hr className={`my-8 transition-colors ${isLightMode ? 'border-zinc-300/80' : 'border-zinc-800/80'}`} />
 
         {/* CONTACT ME SECTION */}
-        <section id="contact" className="mb-12 scroll-mt-10">
+        <section id="contact" className="mb-12 scroll-mt-20">
           <h2 className={`text-2xl md:text-3xl font-bold mb-4 transition-colors ${
             isLightMode ? 'text-black' : 'text-white'
           }`}>
@@ -610,8 +677,8 @@ export default function PortfolioPage() {
                     </svg>
                   </div>
                   <div>
-                    <span className="block text-[11px] font-medium text-zinc-500">
-                      Email
+                    <span className="block text-[11px] font-mono text-zinc-500">
+                      EMAIL
                     </span>
                     <span className={`text-[13px] font-medium transition-colors ${
                       isLightMode ? 'text-zinc-800 group-hover:text-black' : 'text-zinc-200 group-hover:text-white'
@@ -636,8 +703,8 @@ export default function PortfolioPage() {
                     </svg>
                   </div>
                   <div>
-                    <span className="block text-[11px] font-medium text-zinc-500">
-                      GitHub
+                    <span className="block text-[11px] font-mono text-zinc-500">
+                      GITHUB
                     </span>
                     <span className={`text-[13px] font-medium transition-colors ${
                       isLightMode ? 'text-zinc-800 group-hover:text-black' : 'text-zinc-200 group-hover:text-white'
@@ -662,8 +729,8 @@ export default function PortfolioPage() {
                     </svg>
                   </div>
                   <div>
-                    <span className="block text-[11px] font-medium text-zinc-500">
-                      LinkedIn
+                    <span className="block text-[11px] font-mono text-zinc-500">
+                      LINKEDIN
                     </span>
                     <span className={`text-[13px] font-medium transition-colors ${
                       isLightMode ? 'text-zinc-800 group-hover:text-black' : 'text-zinc-200 group-hover:text-white'
