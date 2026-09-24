@@ -19,6 +19,11 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Eugene Ganesha Hermanus - Software Engineer",
   description: "Eugene's portofolio - Open for Software Engineering Internship",
+  icons: {
+    icon: '/profile.webp',
+    shortcut: '/profile.webp',
+    apple: '/profile.webp', // Untuk tampilan saat di-bookmark di iPhone/Safari
+  },
 };
 
 export default function RootLayout({
