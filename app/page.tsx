@@ -190,63 +190,63 @@ export default function PortfolioPage() {
           }`}>
             
             <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100">
+              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
                 <i className="devicon-javascript-plain colored text-3xl"></i>
               </div>
               <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Javascript</span>
             </div>
 
             <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale group-hover:grayscale-0 group-hover:opacity-100">
                 <i className="devicon-typescript-plain colored text-3xl"></i>
               </div>
               <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Typescript</span>
             </div>
 
             <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale  group-hover:grayscale-0 group-hover:opacity-100">
                 <i className="devicon-nodejs-plain colored text-3xl"></i>
               </div>
               <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Node.js</span>
             </div>
 
             <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale  group-hover:grayscale-0 group-hover:opacity-100">
                 <i className="devicon-react-original colored text-3xl"></i>
               </div>
               <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>React.js</span>
             </div>
 
             <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale  group-hover:grayscale-0 group-hover:opacity-100">
                 <i className="devicon-tailwindcss-original colored text-3xl"></i>
               </div>
               <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>TailwindCSS</span>
             </div>
 
             <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale  group-hover:grayscale-0 group-hover:opacity-100">
                 <i className="devicon-postgresql-plain colored text-3xl"></i>
               </div>
               <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Postgres</span>
             </div>
 
             <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale group-hover:grayscale-0 group-hover:opacity-100">
                 <i className="devicon-supabase-plain colored text-3xl"></i>
               </div>
               <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Supabase</span>
             </div>
 
             <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale group-hover:grayscale-0 group-hover:opacity-100">
                 <i className="devicon-postman-plain colored text-3xl"></i>
               </div>
               <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Postman</span>
             </div>
 
             <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale group-hover:grayscale-0 group-hover:opacity-100">
                 <i className="devicon-redis-plain colored text-3xl"></i>
               </div>
               <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Redis</span>
