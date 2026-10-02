@@ -18,11 +18,28 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Eugene Ganesha Hermanus - Software Engineer",
-  description: "Eugene's portofolio - Open for Software Engineering Internship",
+  description: "Third-year computer science student focused on building user interfaces and integrating backend services.",
   icons: {
     icon: '/profile.webp',
     shortcut: '/profile.webp',
     apple: '/profile.webp', // Untuk tampilan saat di-bookmark di iPhone/Safari
+  },
+
+  openGraph: {
+    title: "Eugene's Portfolio",
+    description: "Third-year computer science student focused on building user interfaces and integrating backend services.",
+    url: "https://eugeneeg.vercel.app", // Ganti dengan URL domain publik kamu
+    siteName: "Eugene Portfolio",
+    images: [
+      {
+        url: "https://eugeneeg.vercel.app/og-image.webp", // Wajib menggunakan URL Absolut (bukan relatif)
+        width: 1200,
+        height: 630,
+        alt: "Eugene Ganesha Hermanus Portfolio Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
   },
 };
 
