@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     title: "Eugene's Portfolio",
     description: "Third-year computer science student focused on building user interfaces and integrating backend services.",
     url: "https://eugeneeg.vercel.app", // Ganti dengan URL domain publik kamu
-    siteName: "Eugene Portfolio",
     images: [
       {
         url: "https://eugeneeg.vercel.app/og_image.webp", // Wajib menggunakan URL Absolut (bukan relatif)
