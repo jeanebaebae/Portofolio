@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Eugene Portfolio",
     images: [
       {
-        url: "https://eugeneeg.vercel.app/og-image.webp", // Wajib menggunakan URL Absolut (bukan relatif)
+        url: "https://eugeneeg.vercel.app/og_image.webp", // Wajib menggunakan URL Absolut (bukan relatif)
         width: 1200,
         height: 630,
         alt: "Eugene Ganesha Hermanus Portfolio Preview",
