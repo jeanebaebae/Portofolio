@@ -190,7 +190,7 @@ export default function PortfolioPage() {
           }`}>
             
             <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
+              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100">
                 <i className="devicon-javascript-plain colored text-3xl"></i>
               </div>
               <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Javascript</span>
@@ -198,9 +198,9 @@ export default function PortfolioPage() {
 
             <div className="flex flex-col items-center gap-2 group cursor-pointer">
               <div className="transition-all duration-300 transform group-hover:scale-150 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100">
-                <i className="devicon-go-original-wordmark colored text-3xl"></i>
+                <i className="devicon-typescript-plain colored text-3xl"></i>
               </div>
-              <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Golang</span>
+              <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Typescript</span>
             </div>
 
             <div className="flex flex-col items-center gap-2 group cursor-pointer">
@@ -365,7 +365,7 @@ export default function PortfolioPage() {
                   }`}>Jetpack Compose</span>
                   <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
                     isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                  }`}>Go</span>
+                  }`}>Node.js</span>
                   <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
                     isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
                   }`}>Postgres</span>
