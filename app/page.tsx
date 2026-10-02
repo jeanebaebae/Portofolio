@@ -299,7 +299,7 @@ export default function PortfolioPage() {
                   }`}>Flutter</span>
                   <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
                     isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                  }`}>Node.js</span>
+                  }`}>Express.js</span>
                   <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
                     isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
                   }`}>Postgres</span>
@@ -365,7 +365,7 @@ export default function PortfolioPage() {
                   }`}>Jetpack Compose</span>
                   <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
                     isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                  }`}>Node.js</span>
+                  }`}>Express.js</span>
                   <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
                     isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
                   }`}>Postgres</span>
@@ -427,6 +427,9 @@ export default function PortfolioPage() {
                       <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
                         isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
                       }`}>TailwindCSS</span>
+                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                      }`}>Express.js</span>
                       <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
                         isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
                       }`}>Postgres</span>
