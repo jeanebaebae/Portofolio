@@ -177,6 +177,19 @@ export default function PortfolioPage() {
             >
               <FaLinkedin className="w-8 h-8" />
             </a>
+
+            <a
+              href="/Eugene-Resume.pdf" // Ganti dengan path file resume / CV kamu
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`group inline-flex items-center gap-1.5 px-3 py-3 rounded-lg font-mono text-xs font-semibold tracking-wider transition-all shadow-sm active:scale-95 ${
+                isLightMode
+                  ? 'bg-zinc-900 text-white hover:bg-black'
+                  : 'bg-white text-black hover:bg-zinc-200'
+              }`}
+            >
+              <span>View Resume</span>
+            </a>
           </div>
         </section>
 
