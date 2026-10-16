@@ -318,10 +318,13 @@ export default function PortfolioPage() {
                   }`}>Postgres</span>
                   <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
                     isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  }`}>OAuth</span>
+                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
                   }`}>Supabase</span>
                   <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
                     isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                  }`}>OAuth</span>
+                  }`}>Postman</span>
                 </div>
               </div>
               
@@ -365,32 +368,34 @@ export default function PortfolioPage() {
                 <p className={`text-[12px] mb-3.5 px-0.5 leading-relaxed font-normal transition-colors ${
                   isLightMode ? 'text-zinc-600' : 'text-zinc-400'
                 }`}>
-                  An easy-to-use platform connecting suppliers and clients to browse products and 
-                  track inventory in real time.
+                  Backend API for a procurement platform enabling suppliers to manage product catalogues and buyers to handle cart checkout.
                 </p>
                 
                 <div className="flex flex-wrap gap-1.5 mb-4 px-0.5">
                   <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
                     isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                  }`}>Kotlin</span>
-                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
-                  }`}>Jetpack Compose</span>
-                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
                   }`}>Express.js</span>
+                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  }`}>Winston</span>
                   <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
                     isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
                   }`}>Postgres</span>
                   <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
                     isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  }`}>JWT</span>
+                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
                   }`}>Supabase</span>
+                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  }`}>Swagger</span>
                 </div>
               </div>
               
               <div className="px-0.5 pt-1">
                 <a
-                  href="https://github.com/jeanebaebae/suplaihub-app"
+                  href="https://github.com/jeanebaebae/Suplaihub"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg font-mono text-xs font-semibold tracking-wider transition-colors shadow-sm active:scale-95 ${
