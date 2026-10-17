@@ -181,127 +181,116 @@ export default function PortfolioPage() {
         <hr className={`my-8 transition-colors ${isLightMode ? 'border-zinc-300/80' : 'border-zinc-800/80'}`} />
 
         {/* TECH STACK SECTION */}
-        <section className="mb-8">
+        <section className="w-full py-2">
           <div
-            className={`grid grid-cols-3 sm:grid-cols-5 gap-y-5 sm:gap-y-8 gap-x-2 text-center text-[9px] sm:text-[11px] font-medium transition-colors ${
-                isLightMode ? 'text-zinc-600' : 'text-zinc-400'
+            className={`grid grid-cols-4 gap-y-6 sm:gap-y-8 gap-x-2 text-center text-[9px] sm:text-[11px] font-medium transition-colors ${
+            isLightMode ? 'text-zinc-600' : 'text-zinc-400'
             }`}
-           >
+          >
+            {/* Row 1: 4 Items */}
             <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
-                <div className="transition-all duration-300 transform group-hover:scale-125">
-                <i className="devicon-javascript-plain colored text-xl sm:text-2xl md:text-3xl"></i>
-                </div>
-                <span
-                className={`transition-colors ${
-                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
-                }`}
-                >
-                JavaScript
-                </span>
-            </div>
-
-            <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
-                <div className="transition-all duration-300 transform group-hover:scale-125">
+            <div className="transition-all duration-300 transform group-hover:scale-125">
                 <i className="devicon-typescript-plain colored text-xl sm:text-2xl md:text-3xl"></i>
-                </div>
-                <span
+            </div>
+            <span
                 className={`transition-colors ${
-                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
+                isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
                 }`}
-                >
+            >
                 TypeScript
-                </span>
+            </span>
             </div>
 
             <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
-                <div className="transition-all duration-300 transform group-hover:scale-125">
+            <div className="transition-all duration-300 transform group-hover:scale-125">
+                <i className="devicon-javascript-plain colored text-xl sm:text-2xl md:text-3xl"></i>
+            </div>
+            <span
+                className={`transition-colors ${
+                isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
+                }`}
+            >
+                JavaScript
+            </span>
+            </div>
+
+            <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
+            <div className="transition-all duration-300 transform group-hover:scale-125">
                 <i className="devicon-nodejs-plain colored text-xl sm:text-2xl md:text-3xl"></i>
-                </div>
-                <span
+            </div>
+            <span
                 className={`transition-colors ${
-                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
+                isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
                 }`}
-                >
+            >
                 Node.js
-                </span>
+            </span>
             </div>
 
             <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
-                <div className="transition-all duration-300 transform group-hover:scale-125">
+            <div className="transition-all duration-300 transform group-hover:scale-125">
                 <i className="devicon-react-original colored text-xl sm:text-2xl md:text-3xl"></i>
-                </div>
-                <span
+            </div>
+            <span
                 className={`transition-colors ${
-                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
+                isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
                 }`}
-                >
+            >
                 React.js
-                </span>
+            </span>
             </div>
 
+            {/* Row 2: 4 Items */}
             <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
-                <div className="transition-all duration-300 transform group-hover:scale-125">
+            <div className="transition-all duration-300 transform group-hover:scale-125">
                 <i className="devicon-tailwindcss-original colored text-xl sm:text-2xl md:text-3xl"></i>
-                </div>
-                <span
+            </div>
+            <span
                 className={`transition-colors ${
-                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
+                isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
                 }`}
-                >
+            >
                 TailwindCSS
-                </span>
+            </span>
             </div>
 
             <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
-                <div className="transition-all duration-300 transform group-hover:scale-125">
+            <div className="transition-all duration-300 transform group-hover:scale-125">
                 <i className="devicon-postgresql-plain colored text-xl sm:text-2xl md:text-3xl"></i>
-                </div>
-                <span
+            </div>
+            <span
                 className={`transition-colors ${
-                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
+                isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
                 }`}
-                >
+            >
                 PostgreSQL
-                </span>
+            </span>
             </div>
 
             <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
-                <div className="transition-all duration-300 transform group-hover:scale-125">
-                <i className="devicon-supabase-plain colored text-xl sm:text-2xl md:text-3xl"></i>
-                </div>
-                <span
-                className={`transition-colors ${
-                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
-                }`}
-                >
-                Supabase
-                </span>
-            </div>
-
-            <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
-                <div className="transition-all duration-300 transform group-hover:scale-125">
+            <div className="transition-all duration-300 transform group-hover:scale-125">
                 <i className="devicon-postman-plain colored text-xl sm:text-2xl md:text-3xl"></i>
-                </div>
-                <span
+            </div>
+            <span
                 className={`transition-colors ${
-                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
+                isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
                 }`}
-                >
+            >
                 Postman
-                </span>
+            </span>
             </div>
 
             <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
-                <div className="transition-all duration-300 transform group-hover:scale-125">
+            <div className="transition-all duration-300 transform group-hover:scale-125">
                 <i className="devicon-swagger-plain colored text-xl sm:text-2xl md:text-3xl"></i>
-                </div>
-                <span
+            </div>
+            <span
                 className={`transition-colors ${
-                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
+                isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
                 }`}
-                >
+            >
                 Swagger
-                </span>
+            </span>
             </div>
           </div>
         </section>
