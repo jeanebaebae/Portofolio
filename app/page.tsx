@@ -7,6 +7,7 @@ import Waves from '@/components/Waves';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import TerminalBanner from '@/components/TerminalBanner';
 
 export default function PortfolioPage() {
   const [showMoreProjects, setShowMoreProjects] = useState(false);
@@ -94,27 +95,10 @@ export default function PortfolioPage() {
         <section className="mb-8 mt-4">
           {/* Banner Container */}
           <div className="relative mb-5">
-            {/* Wavy Banner Container */}
-            <div className={`relative w-full h-[210px] rounded-3xl overflow-hidden shadow-inner border transition-colors duration-500 ${
-              isLightMode ? 'bg-[#F2ECE4] border-zinc-300/80' : 'bg-[#0d0d0e] border-zinc-800/80'
-            }`}>
-                <Waves
-                  lineColor={isLightMode ? "#B5B0A8" : "#757575"}
-                  backgroundColor={isLightMode ? "#F2ECE4" : "#0a0a0a"}
-                  waveSpeedX={0.01}
-                  waveSpeedY={0.01}
-                  waveAmpX={40}
-                  waveAmpY={20}
-                  friction={0.9}
-                  tension={0.01}
-                  maxCursorMove={120}
-                  xGap={12}
-                  yGap={36}
-                />
-            </div>
+            <TerminalBanner isLightMode={isLightMode} />
 
             {/* Floating Profile Image */}
-            <div className="absolute -bottom-24 right-2 md:right-4 w-44 md:w-56 h-44 md:h-56 z-10 transition-transform duration-300 hover:scale-105">
+            {/* <div className="absolute -bottom-24 right-0 md:right-0 w-44 md:w-56 h-44 md:h-56 z-10 transition-transform duration-300 hover:scale-105">
               <Image
                 src="/profile.webp"
                 alt="Profile Avatar"
@@ -123,7 +107,7 @@ export default function PortfolioPage() {
                 priority
                 className="object-contain [image-rendering:pixelated]"
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Intro Heading */}
@@ -198,74 +182,74 @@ export default function PortfolioPage() {
 
         {/* TECH STACK SECTION */}
         <section className="mb-8">
-          <div className={`grid grid-cols-5 gap-y-8 gap-x-2 text-center text-[11px] font-medium transition-colors ${
-            isLightMode ? 'text-zinc-600' : 'text-zinc-400'
-          }`}>
-            
-            <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100">
-                <i className="devicon-javascript-plain colored text-3xl"></i>
-              </div>
-              <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Javascript</span>
-            </div>
+            <div className={`grid grid-cols-5 gap-y-8 gap-x-2 text-center text-[11px] font-medium transition-colors ${
+                isLightMode ? 'text-zinc-600' : 'text-zinc-400'
+            }`}>
+                
+                <div className="flex flex-col items-center gap-2 group cursor-pointer">
+                <div className="transition-all duration-300 transform group-hover:scale-125">
+                    <i className="devicon-javascript-plain colored text-3xl"></i>
+                </div>
+                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>JavaScript</span>
+                </div>
 
-            <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale group-hover:grayscale-0 group-hover:opacity-100">
-                <i className="devicon-typescript-plain colored text-3xl"></i>
-              </div>
-              <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Typescript</span>
-            </div>
+                <div className="flex flex-col items-center gap-2 group cursor-pointer">
+                <div className="transition-all duration-300 transform group-hover:scale-125">
+                    <i className="devicon-typescript-plain colored text-3xl"></i>
+                </div>
+                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>TypeScript</span>
+                </div>
 
-            <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale  group-hover:grayscale-0 group-hover:opacity-100">
-                <i className="devicon-nodejs-plain colored text-3xl"></i>
-              </div>
-              <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Node.js</span>
-            </div>
+                <div className="flex flex-col items-center gap-2 group cursor-pointer">
+                <div className="transition-all duration-300 transform group-hover:scale-125">
+                    <i className="devicon-nodejs-plain colored text-3xl"></i>
+                </div>
+                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Node.js</span>
+                </div>
 
-            <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale  group-hover:grayscale-0 group-hover:opacity-100">
-                <i className="devicon-react-original colored text-3xl"></i>
-              </div>
-              <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>React.js</span>
-            </div>
+                <div className="flex flex-col items-center gap-2 group cursor-pointer">
+                <div className="transition-all duration-300 transform group-hover:scale-125">
+                    <i className="devicon-react-original colored text-3xl"></i>
+                </div>
+                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>React.js</span>
+                </div>
 
-            <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale  group-hover:grayscale-0 group-hover:opacity-100">
-                <i className="devicon-tailwindcss-original colored text-3xl"></i>
-              </div>
-              <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>TailwindCSS</span>
-            </div>
+                <div className="flex flex-col items-center gap-2 group cursor-pointer">
+                <div className="transition-all duration-300 transform group-hover:scale-125">
+                    <i className="devicon-tailwindcss-original colored text-3xl"></i>
+                </div>
+                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>TailwindCSS</span>
+                </div>
 
-            <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale  group-hover:grayscale-0 group-hover:opacity-100">
-                <i className="devicon-postgresql-plain colored text-3xl"></i>
-              </div>
-              <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Postgres</span>
-            </div>
+                <div className="flex flex-col items-center gap-2 group cursor-pointer">
+                <div className="transition-all duration-300 transform group-hover:scale-125">
+                    <i className="devicon-postgresql-plain colored text-3xl"></i>
+                </div>
+                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>PostgreSQL</span>
+                </div>
 
-            <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale group-hover:grayscale-0 group-hover:opacity-100">
-                <i className="devicon-supabase-plain colored text-3xl"></i>
-              </div>
-              <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Supabase</span>
-            </div>
+                <div className="flex flex-col items-center gap-2 group cursor-pointer">
+                <div className="transition-all duration-300 transform group-hover:scale-125">
+                    <i className="devicon-supabase-plain colored text-3xl"></i>
+                </div>
+                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Supabase</span>
+                </div>
 
-            <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale group-hover:grayscale-0 group-hover:opacity-100">
-                <i className="devicon-postman-plain colored text-3xl"></i>
-              </div>
-              <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Postman</span>
-            </div>
+                <div className="flex flex-col items-center gap-2 group cursor-pointer">
+                <div className="transition-all duration-300 transform group-hover:scale-125">
+                    <i className="devicon-postman-plain colored text-3xl"></i>
+                </div>
+                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Postman</span>
+                </div>
 
-            <div className="flex flex-col items-center gap-2 group cursor-pointer">
-              <div className="transition-all duration-300 transform group-hover:scale-150 grayscale group-hover:grayscale-0 group-hover:opacity-100">
-                <i className="devicon-redis-plain colored text-3xl"></i>
-              </div>
-              <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Redis</span>
-            </div>
+                <div className="flex flex-col items-center gap-2 group cursor-pointer">
+                <div className="transition-all duration-300 transform group-hover:scale-125">
+                    <i className="devicon-swagger-plain colored text-3xl"></i>
+                </div>
+                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Swagger</span>
+                </div>
 
-          </div>
+            </div>
         </section>
 
         {/* DIVIDER 2 */}
