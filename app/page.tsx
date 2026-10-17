@@ -182,74 +182,128 @@ export default function PortfolioPage() {
 
         {/* TECH STACK SECTION */}
         <section className="mb-8">
-            <div className={`grid grid-cols-5 gap-y-8 gap-x-2 text-center text-[11px] font-medium transition-colors ${
+          <div
+            className={`grid grid-cols-3 sm:grid-cols-5 gap-y-5 sm:gap-y-8 gap-x-2 text-center text-[9px] sm:text-[11px] font-medium transition-colors ${
                 isLightMode ? 'text-zinc-600' : 'text-zinc-400'
-            }`}>
-                
-                <div className="flex flex-col items-center gap-2 group cursor-pointer">
+            }`}
+           >
+            <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
                 <div className="transition-all duration-300 transform group-hover:scale-125">
-                    <i className="devicon-javascript-plain colored text-3xl"></i>
+                <i className="devicon-javascript-plain colored text-xl sm:text-2xl md:text-3xl"></i>
                 </div>
-                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>JavaScript</span>
-                </div>
-
-                <div className="flex flex-col items-center gap-2 group cursor-pointer">
-                <div className="transition-all duration-300 transform group-hover:scale-125">
-                    <i className="devicon-typescript-plain colored text-3xl"></i>
-                </div>
-                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>TypeScript</span>
-                </div>
-
-                <div className="flex flex-col items-center gap-2 group cursor-pointer">
-                <div className="transition-all duration-300 transform group-hover:scale-125">
-                    <i className="devicon-nodejs-plain colored text-3xl"></i>
-                </div>
-                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Node.js</span>
-                </div>
-
-                <div className="flex flex-col items-center gap-2 group cursor-pointer">
-                <div className="transition-all duration-300 transform group-hover:scale-125">
-                    <i className="devicon-react-original colored text-3xl"></i>
-                </div>
-                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>React.js</span>
-                </div>
-
-                <div className="flex flex-col items-center gap-2 group cursor-pointer">
-                <div className="transition-all duration-300 transform group-hover:scale-125">
-                    <i className="devicon-tailwindcss-original colored text-3xl"></i>
-                </div>
-                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>TailwindCSS</span>
-                </div>
-
-                <div className="flex flex-col items-center gap-2 group cursor-pointer">
-                <div className="transition-all duration-300 transform group-hover:scale-125">
-                    <i className="devicon-postgresql-plain colored text-3xl"></i>
-                </div>
-                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>PostgreSQL</span>
-                </div>
-
-                <div className="flex flex-col items-center gap-2 group cursor-pointer">
-                <div className="transition-all duration-300 transform group-hover:scale-125">
-                    <i className="devicon-supabase-plain colored text-3xl"></i>
-                </div>
-                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Supabase</span>
-                </div>
-
-                <div className="flex flex-col items-center gap-2 group cursor-pointer">
-                <div className="transition-all duration-300 transform group-hover:scale-125">
-                    <i className="devicon-postman-plain colored text-3xl"></i>
-                </div>
-                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Postman</span>
-                </div>
-
-                <div className="flex flex-col items-center gap-2 group cursor-pointer">
-                <div className="transition-all duration-300 transform group-hover:scale-125">
-                    <i className="devicon-swagger-plain colored text-3xl"></i>
-                </div>
-                <span className={`transition-colors ${isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'}`}>Swagger</span>
-                </div>
-
+                <span
+                className={`transition-colors ${
+                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
+                }`}
+                >
+                JavaScript
+                </span>
             </div>
+
+            <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
+                <div className="transition-all duration-300 transform group-hover:scale-125">
+                <i className="devicon-typescript-plain colored text-xl sm:text-2xl md:text-3xl"></i>
+                </div>
+                <span
+                className={`transition-colors ${
+                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
+                }`}
+                >
+                TypeScript
+                </span>
+            </div>
+
+            <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
+                <div className="transition-all duration-300 transform group-hover:scale-125">
+                <i className="devicon-nodejs-plain colored text-xl sm:text-2xl md:text-3xl"></i>
+                </div>
+                <span
+                className={`transition-colors ${
+                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
+                }`}
+                >
+                Node.js
+                </span>
+            </div>
+
+            <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
+                <div className="transition-all duration-300 transform group-hover:scale-125">
+                <i className="devicon-react-original colored text-xl sm:text-2xl md:text-3xl"></i>
+                </div>
+                <span
+                className={`transition-colors ${
+                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
+                }`}
+                >
+                React.js
+                </span>
+            </div>
+
+            <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
+                <div className="transition-all duration-300 transform group-hover:scale-125">
+                <i className="devicon-tailwindcss-original colored text-xl sm:text-2xl md:text-3xl"></i>
+                </div>
+                <span
+                className={`transition-colors ${
+                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
+                }`}
+                >
+                TailwindCSS
+                </span>
+            </div>
+
+            <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
+                <div className="transition-all duration-300 transform group-hover:scale-125">
+                <i className="devicon-postgresql-plain colored text-xl sm:text-2xl md:text-3xl"></i>
+                </div>
+                <span
+                className={`transition-colors ${
+                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
+                }`}
+                >
+                PostgreSQL
+                </span>
+            </div>
+
+            <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
+                <div className="transition-all duration-300 transform group-hover:scale-125">
+                <i className="devicon-supabase-plain colored text-xl sm:text-2xl md:text-3xl"></i>
+                </div>
+                <span
+                className={`transition-colors ${
+                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
+                }`}
+                >
+                Supabase
+                </span>
+            </div>
+
+            <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
+                <div className="transition-all duration-300 transform group-hover:scale-125">
+                <i className="devicon-postman-plain colored text-xl sm:text-2xl md:text-3xl"></i>
+                </div>
+                <span
+                className={`transition-colors ${
+                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
+                }`}
+                >
+                Postman
+                </span>
+            </div>
+
+            <div className="flex flex-col items-center gap-1.5 sm:gap-2 group cursor-pointer">
+                <div className="transition-all duration-300 transform group-hover:scale-125">
+                <i className="devicon-swagger-plain colored text-xl sm:text-2xl md:text-3xl"></i>
+                </div>
+                <span
+                className={`transition-colors ${
+                    isLightMode ? 'group-hover:text-black' : 'group-hover:text-white'
+                }`}
+                >
+                Swagger
+                </span>
+            </div>
+          </div>
         </section>
 
         {/* DIVIDER 2 */}
@@ -291,23 +345,23 @@ export default function PortfolioPage() {
                 </p>
                 
                 <div className="flex flex-wrap gap-1.5 mb-4 px-0.5">
-                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                   }`}>Flutter</span>
-                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                   }`}>Express.js</span>
-                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                   }`}>Postgres</span>
-                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                   }`}>OAuth</span>
-                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                   }`}>Supabase</span>
-                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                   }`}>Postman</span>
                 </div>
               </div>
@@ -356,23 +410,23 @@ export default function PortfolioPage() {
                 </p>
                 
                 <div className="flex flex-wrap gap-1.5 mb-4 px-0.5">
-                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                   }`}>Express.js</span>
-                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                   }`}>Winston</span>
-                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                   }`}>Postgres</span>
-                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                   }`}>JWT</span>
-                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                   }`}>Supabase</span>
-                  <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                  <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                    isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                   }`}>Swagger</span>
                 </div>
               </div>
@@ -423,20 +477,20 @@ export default function PortfolioPage() {
                       the NASA FIRMS API.
                     </p>
                     <div className="flex flex-wrap gap-1.5 mb-4 px-0.5">
-                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                      <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                       }`}>React.js</span>
-                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                      <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                       }`}>TailwindCSS</span>
-                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                      <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                       }`}>Express.js</span>
-                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                      <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                       }`}>Postgres</span>
-                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                      <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                       }`}>Redis</span>
                     </div>
                   </div>
@@ -482,11 +536,11 @@ export default function PortfolioPage() {
                       A simple portofolio website using Next.js and TailwindCSS
                     </p>
                     <div className="flex flex-wrap gap-1.5 mb-4 px-0.5">
-                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                      <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                       }`}>Next.js</span>
-                      <span className={`px-3 py-1 text-[11px] font-medium rounded-md transition-colors ${
-                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-800 text-zinc-200'
+                      <span className={`px-3 py-1 text-[11px] font-mono rounded-sm transition-colors ${
+                        isLightMode ? 'bg-[#EFE8DF] text-zinc-800' : 'bg-zinc-900 text-zinc-200'
                       }`}>TailwindCSS</span>
                     </div>
                   </div>

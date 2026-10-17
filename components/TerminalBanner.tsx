@@ -40,7 +40,7 @@ export default function TerminalBanner({ isLightMode = false }: TerminalBannerPr
     <div
       className={`relative w-full rounded-sm overflow-hidden shadow-2 border transition-colors duration-300 text-left font-mono select-none ${
         isLightMode
-          ? 'bg-[#FFFAF4] border-zinc-200 shadow-zinc-200/50'
+          ? 'bg-[#F7F7F7] border-zinc-200 shadow-zinc-200/50'
           : 'bg-[#1A1A1A] border-zinc-800/60 shadow-black/40'
       }`}
     >
@@ -48,7 +48,7 @@ export default function TerminalBanner({ isLightMode = false }: TerminalBannerPr
       <div
         className={`flex items-center justify-between px-4 py-2.5 border-b transition-colors duration-300 ${
           isLightMode
-            ? 'bg-[#FFFAF4] border-zinc-200'
+            ? 'bg-[#EDEDED] border-zinc-200'
             : 'bg-[#181825] border-zinc-800/80'
         }`}
       >
